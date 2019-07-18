@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/html5bp.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="shortcut icon" type= "image/png" href = "img.png">
   </head>
   <body>
      ${content}
