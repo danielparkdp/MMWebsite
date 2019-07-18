@@ -51,9 +51,9 @@ public final class Main {
     OptionSet options = parser.parse(args);
 
 
-    if (options.has("gui")) {
-      runSparkServer((int) options.valueOf("port"));
-    }
+
+    runSparkServer();
+
 
 
   }
@@ -71,8 +71,8 @@ public final class Main {
     return new FreeMarkerEngine(config);
   }
 
-  private void runSparkServer(int port) {
-    Spark.port(port);
+  private static void runSparkServer() {
+      Spark.port(getHerokuAssignedPort()); 
     Spark.externalStaticFileLocation("src/main/resources/static");
 
     FreeMarkerEngine freeMarker = createEngine();
@@ -98,6 +98,13 @@ public final class Main {
     }
   }
 
+  static int getHerokuAssignedPort() {
+      ProcessBuilder processBuilder = new ProcessBuilder();
+      if (processBuilder.environment().get("PORT") != null) {
+          return Integer.parseInt(processBuilder.environment().get("PORT"));
+      }
+      return 4567; //return default port if heroku-port isn't set (i.e. on localhost)
+   } 
 
 
 }
