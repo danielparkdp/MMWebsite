@@ -9,18 +9,14 @@
     <link rel="stylesheet" href="css/normalize.css">
     <link rel="stylesheet" href="css/html5bp.css">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" type= "image/png" href = "img.png">
+    <link rel="shortcut icon" type= "image/png" href = "favicon.ico">
   </head>
   <body>
      ${content}
      <!-- Again, we're serving up the unminified source for clarity. -->
      <script src="js/jquery-2.1.1.js"></script>
      <script src="js/jquery-3.1.1.js"></script>
-     <script src="js/autocorrect.js"></script>
-     <script src="js/bacon.js"></script>
-     <script src="js/startActorAc.js"></script>
-     <script src="js/endActorAc.js"></script>
-     
+
   </body>
   <!-- See http://html5boilerplate.com/ for a good place to start
        dealing with real world issues like old browsers.  -->
